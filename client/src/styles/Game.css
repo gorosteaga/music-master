@@ -1,0 +1,206 @@
+.game-container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--background);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.room-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.room-code-small {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: #f0f7ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.game-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  grid-template-areas:
+    "turn teams"
+    "board teams"
+    "actions teams";
+}
+
+.turn-indicator {
+  grid-area: turn;
+  padding: 24px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.turn-indicator.my-turn {
+  border-color: var(--success-color);
+  background: linear-gradient(to bottom, #e6ffe6, var(--card-background));
+}
+
+.turn-indicator.not-my-turn {
+  border-color: var(--border-color);
+}
+
+.turn-message {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.turn-team {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.game-board {
+  grid-area: board;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 40px;
+  min-height: 400px;
+}
+
+.game-board-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+}
+
+.game-board-placeholder h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.placeholder-info {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.placeholder-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.turn-actions {
+  grid-area: actions;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.teams-sidebar {
+  grid-area: teams;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  height: fit-content;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.teams-sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.team-card {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.team-card.active-team {
+  border-color: var(--primary-color);
+  background-color: #f0f7ff;
+}
+
+.team-card.my-team {
+  background-color: #e6ffe6;
+}
+
+.team-card.my-team.active-team {
+  border-color: var(--success-color);
+  background-color: #d4edda;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.turn-badge,
+.my-badge {
+  font-size: 16px;
+}
+
+.team-players {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.team-player {
+  padding: 6px 10px;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 968px) {
+  .game-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "turn"
+      "teams"
+      "board"
+      "actions";
+  }
+
+  .teams-sidebar {
+    max-height: none;
+  }
+}

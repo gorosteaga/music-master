@@ -1,0 +1,142 @@
+.waiting-room-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.waiting-room-card {
+  background-color: var(--card-background);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 100%;
+}
+
+.waiting-room-card h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+  font-size: 32px;
+}
+
+.room-code-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.room-code-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.room-code-display {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  padding: 16px;
+  background-color: #f0f7ff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.room-code-display:hover {
+  background-color: #e0f0ff;
+  transform: scale(1.02);
+}
+
+.copy-hint {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  letter-spacing: normal;
+}
+
+.players-section {
+  margin-bottom: 30px;
+}
+
+.players-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-item {
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-name {
+  font-weight: 500;
+}
+
+.host-badge {
+  background-color: #ffd700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.game-settings {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.game-settings h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.select-teams {
+  width: 100%;
+}
+
+.waiting-room-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.waiting-message {
+  text-align: center;
+  padding: 16px;
+  background-color: #fff3cd;
+  color: #856404;
+  border-radius: 8px;
+  font-weight: 600;
+}

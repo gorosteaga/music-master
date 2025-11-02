@@ -1,0 +1,17 @@
+{
+  "name": "music-master-server",
+  "version": "1.0.0",
+  "description": "Multiplayer turn-based game server",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "cors": "^2.8.5",
+    "nanoid": "^5.0.4"
+  }
+}
